@@ -18,19 +18,23 @@ public class Task {
     @Id
     @GeneratedValue
     private Long id;
+
     private String name;
+
     @JsonFormat(pattern = "MM/dd/yyyy")
     private LocalDate dueDate;
+
     private Boolean completed;
+
+
+    public Task() {
+
+
+    }
 
     public Task(String name, LocalDate dueDate, Boolean completed) {
         this.name = name;
         this.dueDate = dueDate;
         this.completed = completed;
-    }
-
-    public Task() {
-
-
     }
 }
